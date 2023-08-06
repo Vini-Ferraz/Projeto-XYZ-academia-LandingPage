@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+    <!--Head-->
+    <!--Notas: Aqui meu maior desafio foi selecionar as keywords.-->
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="academia, academia na minha região, academia na minha cidade, perder peso, ganhar massa">
+    <link rel="stylesheet" href="./stylesheet.css" id="folhaDeEstilo">
+    <script src="https://kit.fontawesome.com/d0fd81da1b.js" crossorigin="anonymous"></script>
+    <title>XYZ | Sua academia confiável</title>
+</head>
+<body>
+
+    <!--Menu-->
+    <!--Notas: O foco princípal desse projeto foi criar um modo claro e um escuro (custou um pouco da minha sanidade kkkkk).
+        Antes de começar esse projeto, eu aprendi o básico de DOM, porém na parte do "document.getElementById('folhaDeEstilo').setAttribute('href', sheet)"
+        eu precisei da ajuda de um vídeo do youtube de 11 anos atrás. Incrível como existe vídeo para tudo.-->
+
+    <header>
+        <nav id="menuNavegacao">
+            <div id="tituloMenuFlex">
+                <h1 class="tituloAcademia">XYZ</h1>
+                <button id="botaoHamburger" onclick="aparecerMenu()"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <div id="caixaMenuComportamento">
+                <div id="blocoMenu">
+                    <ul id="lista">
+                        <li class="itensLista" ><a href="#depoimentoRow">DEPOIMENTO</a></li>
+                        <li class="itensLista" ><a href="#aulasRow">AULAS</a></li>
+                        <li class="itensLista" ><a href="#planosRow">PLANOS</a></li>
+                    </ul>
+                    <div id="solLuaFlex">
+                        <button id="lua" onclick="trocarModo ('./stylesheet.css')"><i class="fa-solid fa-moon"></i></button>
+                        <button id="sol" onclick="trocarModo('./stylesheet2.css')"><i class="fa-solid fa-sun"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Hero Row-->
+    <!--Nota: Aqui foi de boa-->
+
+    <main>
+        <section id="heroRow">
+            <article id="heroRowCaixa">
+                <h2 id="slogan">A academia que transforma o seu corpo e a sua mente.</h2>
+                <p id="heroRowTexto">
+                    Promoção de academia: 50% off na primeira mensalidade. Aproveite já!
+                </p>
+                <button id="botaoAssineJa">Assine Já!</button>
+            </article>
+        </section>
+
+    <!--Depoimento Row-->
+    <!--Nota: Aqui foi de boa também-->
+
+        <section id="depoimentoRow">
+            <div id="tituloDepoimentoCaixaTitulo">
+                <h2 id="depoimento">DEPOIMENTO</h2>
+            </div>
+            <div id="depoimentoFundo">
+                <article id="caixaDepoimentoConteudo">
+                    <div id="imagemDepoimentoFlex">
+                        <img src="https://cdn.pixabay.com/photo/2019/06/25/06/02/woman-4297471_1280.jpg" alt="mulher asiática segurando com o por-do-sol de fundo" id="fotoMulherAsiatica">
+                    </div>
+                    <div id="textoDepoimentoFlex">
+                        <h3 id="nomeCliente" title="&#128527">Ana L.</h3>
+                        <p id="depoimentoTexto">Eu amo a academia XYZ! Os professores são atenciosos, as aulas são divertidas e os equipamentos são de primeira.
+                             Eu me sinto muito bem depois de cada treino e vejo os resultados no meu corpo e na minha saúde. Recomendo para todos!</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    <!--Aulas Row-->
+    <!--Nota: Aqui precisei ajustar a altura da imagem, pois a última estáva dando uma de rebelde.-->
+
+        <section id="aulasRow">
+            <div id="aulaCaixa">
+                <h2 id="aulas">AULAS</h2>
+            </div>
+                <article id="baleClassico" class="esquerdoFlex">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/22/19/26/adult-1850184_1280.jpg" alt="Um casal fazendo um movimento de dança" class="imagemAulas">
+                    <div class="textoAulaFlex">
+                        <p class="textoAula">
+                            Aprenda os fundamentos do balé clássico na nossa academia e combine técnica, expressão e elegância. Desenvolva sua postura, flexibilidade e coordenação, e se divirta com música e movimento. Faça uma aula experimental e veja os benefícios do balé para o corpo e mente.
+                        </p>
+                    </div>
+                </article>
+                <article id="yoga" class="direitoFlex">
+                    <img src="https://cdn.pixabay.com/photo/2022/04/18/13/27/yoga-7140566_1280.jpg" alt="Uma mulher em pose de meditação" class="imagemAulas">
+                    <div class="textoAulaFlex"></div>
+                        <p class="textoAula">
+                            Venha fazer aulas de yoga na nossa academia e se sinta mais relaxado, saudável e feliz! Aprenda respiração, postura e meditação que melhoram sua vida. Garanta sua vaga hoje com nossa promoção especial!
+                        </p>
+                    </div>
+                </article>
+                <article id="bike" class="esquerdoFlex">
+                    <img src="https://cdn.pixabay.com/photo/2015/05/17/19/41/team-771474_1280.jpg" alt="Mulheres andando em bikes de academia" class="imagemAulas">
+                    <p class="textoAula" class="trocaModoEscuroTexto">
+                        Venha para as aulas de bike in door da nossa academia e se exercite, divirta-se e queime calorias! Pedale 30 minutos com música e instrutores. Sinta os benefícios no corpo e na mente. Matricule-se já!
+                    </p>
+                </article>
+                <article id="boxe" class="direitoFlex">
+                    <img src="https://cdn.pixabay.com/photo/2016/07/13/16/00/box-1514845_1280.jpg" alt="Homem com luvas de boxe socando o ar" class="imagemAulas">
+                    <p class="textoAula" class="trocaModoEscuroTexto">
+                        Venha para as aulas de boxe da nossa academia e fique em forma, com mais energia e diversão! Aprenda os fundamentos desse esporte, queime calorias e libere o estresse. Matricule-se já!
+                    </p>
+                </article>
+        </section>
+
+    <!--Planos Row-->
+    <!--Nota: Aqui foi de boa 2-->
+
+        <section id="planosRow">
+            <div id="tituloPlanoCaixa">
+                <h2 id="planos">PLANOS</h2>
+            </div>
+            <div id="planosCaixasFlex">
+                <article id="planoPrata" class="caixaPequena">
+                    <div id="planoPrecoNomePrata">
+                        <h3 class="planoNome">PRATA</h3>
+                        <p class="planoPreco">R$ 150.00<span class="mes">/mês</span></p>
+                    </div>
+                </article>
+                <article id="planoOuro" class="caixaGrande">
+                    <h3 class="planoNomeGrande">OURO</h3>
+                    <p class="planoPrecoGrande">R$ 200.00<span class="mesGrande">/mês</span></p>
+                </article>
+                <article id="planoBronze" class="caixaPequena">
+                    <h3 class="planoNome">BRONZE</h3>
+                    <p class="planoPreco">R$ 100.00<span class="mes">/mês</span></p>
+                </article>
+                </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <!--Nota: Aqui foi de boa 3-->
+
+    <footer id="footer">
+        <div id="blocoMenuFooter">
+            <div>
+                <h1 class="tituloAcademia" id="tituloAcademiaFooterFlex">XYZ</h1>
+            </div>
+            <ul id="listaFooter">
+                <li class="itensListaFooter"><a href="#">Shop</a></li>
+                <li class="itensListaFooter"><a href="#">Contatos</a></li>
+                <li class="itensListaFooter"><a href="#">Sobre nós</a></li>
+            </ul>
+        </div>
+        <hr>
+        <p id="textoCopyRight">© 2023 Todos os direitos reservados.<br>XYZ.</p>
+    </footer>
+
+    <script>
+        function trocarModo(sheet) {
+            document.getElementById('folhaDeEstilo').setAttribute('href', sheet)
+        }
+        function aparecerMenu() {
+            if (document.getElementById('caixaMenuComportamento').style.display == "none") {
+                document.getElementById('caixaMenuComportamento').style.display = "block";
+            } else {
+                document.getElementById('caixaMenuComportamento').style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

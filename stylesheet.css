@@ -1,0 +1,753 @@
+/*Configurações gerais*/
+/*Aqui foi de boa*/
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+@keyframes brilhoPrata {
+    0% {
+        box-shadow: 1vw 1vw 1vw  #9AF7FD;
+    }
+    50% {
+        box-shadow: 1vw 1vw 1.5vw  #2ff1ff;
+    }
+    100% {
+        box-shadow: 1vw 1vw 1vw  #9AF7FD;
+    }
+}
+
+@keyframes brilhoOuro {
+    0% {
+        box-shadow: 0 1.5vw 1vw #FAA500;
+    }
+    50% {
+        box-shadow: 0 1.5vw 1.5vw #ffba30;
+    }
+    100% {
+        box-shadow: 0 1.5vw 1vw #FAA500;
+    }
+}
+
+@keyframes brilhoBronze {
+    0% {
+        box-shadow: -1vw 1vw 1vw #8A2B0D;
+    }
+    50% {
+        box-shadow: -1vw 1vw 1.5vw #b6340c;
+    }
+    100% {
+        box-shadow: -1vw 1vw 1vw #8A2B0D;
+    }
+}
+
+/*Eu tive um certo trabalho para organizar todas as variáveis, mas valeu
+a pena*/
+
+:root {
+    --preto-fundo: #000000;
+    --preto-fundo-segundo: #1C1C1C;
+    --preto-fundo-terceiro: #101010;
+    --preto-fundo-caixa-depoimento: #252525;
+    --branco-letra: #FFFFFF;
+    --branco-sombra: #ffffffbe;
+    --botao-cor-fundo: #C80808;
+    --cor-lua: #000000;
+    --cor-sol: #e1e1e1;
+}
+
+* {
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    scroll-behavior: smooth;
+}
+
+/*Menu*/
+/*Aqui foi bem de boa também*/
+
+#menuNavegacao {
+    background-color: var(--preto-fundo);
+    color: var(--branco-letra);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0.5vw 1vw var(--branco-sombra);
+}
+
+#lista, .itensLista, a, #blocoMenu {
+    list-style: none;
+    text-decoration: none;
+    color: var(--branco-letra);
+    display: flex;
+    flex-direction: row;
+    font-size: 2vw;
+    padding: 0 1vw;
+    font-weight: 700;
+}
+
+.itensLista:hover, a:hover{
+    transform: scale(1.08);
+    color: var(--botao-cor-fundo)
+}
+
+.itensLista:active, a:active {
+    color: #00028d;
+}
+
+#blocoMenu {
+    padding-right: 3vw;
+}
+
+.tituloAcademia{
+    font-size: 5vw;
+    font-weight: 700;
+    padding: 0 2vw;
+    color: var(--branco-letra);
+}
+
+#sol, #lua {
+    width: 3vw;
+    height: 3vw;
+    background: none;
+    border: none;
+    font-size: 3vw;
+    padding-right: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#botaoHamburger {
+    display: none;
+}
+
+.fa-moon {
+    color: var(--cor-lua);
+}
+
+.fa-sun {
+    color: var(--cor-sol);
+}
+
+#solLuaFlex {
+    display: flex;
+    align-items: center;
+}
+
+/*Hero Row*/
+
+#heroRow {
+    padding-top: 15vh;
+    height: 100vh;
+    background-image: linear-gradient(90deg, var(--preto-fundo)30%, #00000000), url('https://cdn.pixabay.com/photo/2015/07/02/10/23/training-828741_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#heroRowTexto {
+    font-size: 3vw;
+    font-weight: 400;
+    padding: 0 2vw;
+    text-align: justify;
+    color: var(--branco-letra);
+}
+
+#slogan {
+    font-size: 6vw;
+    padding: 0 2vw;
+    line-height: 6vw;
+    text-align: justify;
+    color: var(--branco-letra);
+}
+
+#botaoAssineJa {
+    border: none;
+    width: 25vw;
+    height: 5vw;
+    margin: 0 2vw;
+    background-color: var(--botao-cor-fundo);
+    font-size: 3vw;
+    font-weight: 700;
+    color: var(--branco-letra);
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+#botaoAssineJa:hover{
+    transform: scale(1.1);
+}
+
+#botaoAssineJa:active {
+    background-color: #00028d;
+}
+
+#heroRowCaixa {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 60vw;
+}
+
+/*Depoimento Row*/
+/*Aqui foi bem de boa também*/
+
+
+#depoimentoRow {
+    height: fit-content;
+    padding: 5vw 0;
+    background-color: var(--preto-fundo-segundo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+}
+
+#fotoMulherAsiatica {
+    width: 17vw;
+    border-radius: 1vw;
+    padding: 2vw 1vw;
+}
+
+#depoimento, #aulas, #planos {
+    margin: 0 auto;
+    font-size: 6vw;
+    padding-bottom: 3vw;
+    color: var(--branco-letra);
+}
+
+#nomeCliente {
+    color: var(--branco-letra);
+    font-size: 5vw;
+    padding: 0 2vw;
+    padding-top: 1vw;
+}
+
+#depoimentoTexto {
+    color: var(--branco-letra);
+    font-size: 2.5vw;
+    font-weight: 400;
+    line-height: 3.5vw;
+    padding: 2vw;
+    text-align: justify;
+}
+
+#depoimentoFundo {
+    background-color: var(--preto-fundo-caixa-depoimento);
+    width: 75vw;
+    height: 30vw;
+    border-radius: 1vw;
+    box-shadow: 1vw 1vw rgba(0, 0, 0, 0.25);
+}
+
+#tituloDepoimentoCaixaTitulo {
+    width: 100%;
+    text-align: center;
+    padding: 1vw 0;
+}
+
+#caixaDepoimentoConteudo {
+    display: flex;
+    flex-direction: row;
+}
+
+/*Aulas Row*/
+/*Aqui foi bem de boa*/
+
+#aulasRow {
+    background-color: var(--preto-fundo-terceiro);
+    padding: 5vw 0;
+    padding-bottom: 0;
+}
+
+.imagemAulas {
+    width: 50%;
+    height: 36vw;
+    object-fit: fill;
+}
+
+
+.textoAula {
+    color: var(--branco-letra);
+    font-size: 2.5vw;
+    line-height: 4.5vw;
+    text-align: justify;
+    padding: 2vw 2vw;
+    font-weight: 400;
+}
+
+#yoga, #baleClassico, #bike, #boxe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#aulaCaixa {
+    width: 100%;
+    text-align: center;
+    padding: 2vw 0;
+}
+
+.esquerdoFlex {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.textoAulaFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.direitoFlex {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: center;
+}
+
+/*Planos Row*/
+/*Aqui foi bem de boa também*/
+
+#planosRow {
+    background-color: var(--preto-fundo-segundo);
+    padding: 5vw 0;
+}
+
+#planosCaixasFlex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#tituloPlanoCaixa {
+    text-align: center;
+}
+
+.caixaPequena {
+    width: 25vw;
+    height: 30vw;
+    background-color: var(--preto-fundo);
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    border-radius: 1vw;
+}
+
+
+.caixaGrande {
+    width: 30vw;
+    height: 35vw;
+    background-color: var(--preto-fundo);
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    border-radius: 1vw;
+}
+
+.caixaPequena:hover, .caixaGrande:hover {
+    transform: scale(1.1);
+}
+
+.planoNome, .planoPreco {
+    color: var(--branco-letra);
+    font-size: 4vw;
+    font-weight: 700;
+    padding-bottom: 3vw;
+}
+
+.mes {
+    font-size: 2vw;
+}
+
+.mesGrande {
+    font-size: 2.5vw;
+}
+
+.planoNomeGrande, .planoPrecoGrande {
+    color: var(--branco-letra);
+    font-size: 6vw;
+    border-radius: 1vw;
+    font-weight: 700;
+    padding-bottom: 3vw;
+}
+
+#planoPrata {
+    box-shadow: 1vw 1vw 1vw #9AF7FD;
+    animation-name: brilhoPrata;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+}
+
+#planoOuro {
+    box-shadow: 0 1.5vw 1vw #FAA500;
+    animation-name: brilhoOuro;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+}
+
+#planoBronze {
+    box-shadow: -1vw 1vw 1vw #8A2B0D;
+    animation-name: brilhoBronze;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+}
+
+/*Footer*/
+
+#footer {
+    background-color: var(--preto-fundo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20vw;
+    padding: 2.5vw 0;
+}
+
+hr {
+    width: 25vw;
+    border: 0.1vw solid #FFFFFF;
+}
+
+#textoCopyRight {
+    color: var(--branco-letra);
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+#listaFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+}
+
+#blocoMenuFooter {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Aqui criei um MediaQuery na onde ao diminuir a tela, as coisas ficavam estranhas*/
+
+@media (max-width: 600px) {
+    /*Menu*/
+    #blocoMenu, #lista {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #252525;
+        width: 100%;
+    }
+
+    a:hover {
+        background-color: none;
+        transform: none;
+    }
+
+    a:active {
+        transform: none;
+        background-color: none;
+    }
+
+    #menuNavegacao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .tituloAcademia {
+        font-size: 12vw;
+    }
+
+    a, #lua, #sol {
+        font-size: 4.5vw;
+        padding: 1vw;
+    }
+
+    .itensLista:hover, a:hover{
+        transform: scale(1);
+        color: var(--branco-letra);
+    }
+
+    #solLuaFlex {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 50%;
+        padding: 2vw;
+    }
+
+    .fa-moon {
+        color: #252525;
+    }
+    
+    .fa-sun {
+        color: var(--cor-sol);
+    }
+
+    .fa-bars {
+        font-size: 7vw;
+        padding-right: 5vw;
+        color: var(--branco-letra)
+    }
+    
+    #botaoHamburger {
+        display: inline-block;
+        background: none;
+        border: none;
+    }
+
+    #caixaMenuComportamento {
+        display: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;;
+    }
+
+    #tituloMenuFlex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 1vw;
+    }
+
+    /*Hero Row*/
+
+    #heroRow {
+        padding-top: 10vh;
+        height: fit-content;
+        background-image: linear-gradient(90deg, var(--preto-fundo)100%, #00000000), url('https://cdn.pixabay.com/photo/2015/07/02/10/23/training-828741_1280.jpg');
+        display: flex;
+        align-items: center;
+    }
+
+    #heroRowTexto {
+        text-align: center;
+        font-size: 7vw;
+    }
+
+    #slogan {
+        font-size: 9vw;
+        line-height: 9vw;
+        text-align: center;
+        padding-bottom: 10vw;
+    }
+
+    #botaoAssineJa {
+        width: 50%;
+        height: 10vw;
+        font-size: 6vw;
+        margin-top: 10vw;
+    }
+
+    #heroRowCaixa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: fit-content;
+        padding: 10vw 0;
+    }
+
+    /*Depoimento Row*/
+
+    #depoimentoRow {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        padding: 10vw 0;
+    }
+
+    #fotoMulherAsiatica {
+        display: none;
+    }
+    
+    #depoimento, #aulas, #planos {
+        font-size: 10vw;
+        padding-bottom: 5vw;
+    }
+
+    #aulas {
+        padding: 2vw 0;
+    }
+
+    #nomeCliente {
+        font-size: 9vw;
+        padding: 5vw;
+    }
+    
+    #depoimentoTexto {
+        font-size: 5vw;
+        padding: 5vw;
+        padding-top: 0;
+        line-height: 8vw;
+        text-align: justify;
+    }
+
+    #depoimentoFundo {
+        background-color: var(--preto-fundo-caixa-depoimento);
+        width: 75vw;
+        height: fit-content;
+        border-radius: 1vw;
+        box-shadow: 3vw 3vw rgba(0, 0, 0, 0.25);
+    }
+
+    /*Aulas Row*/
+
+        #aulasRow {
+            background-color: var(--preto-fundo-terceiro);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .imagemAulas {
+            width: 100%;
+            height: 50vw;
+            display: block;
+        }
+
+        .textoAula {
+            font-size: 5vw;
+            text-align: justify;
+            margin: 4vw 4vw;
+            line-height: 8vw;
+
+        }
+
+        #aulaCaixa {
+            width: 100%;
+            text-align: center;
+            padding: 2vw 0;
+        }
+
+        .esquerdoFlex, .direitoFlex {
+            display: flex;
+            flex-direction: column;
+        }
+
+    /*Planos Row*/
+
+    #planosRow {
+        background-color: var(--preto-fundo-segundo);
+        padding-bottom: 7vw;
+        height: fit-content;
+        padding: 10vw;
+    }
+
+    #planosCaixasFlex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #tituloPlanoCaixa {
+        text-align: center;
+    }
+
+    .caixaPequena {
+        width: 50vw;
+        height: 65vw;
+        background-color: var(--preto-fundo);
+        margin: 4vw;
+        padding: 1vw;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        border-radius: 1vw;
+    }
+
+    .caixaGrande {
+        width: 55vw;
+        height: 70vw;
+        margin: 4vw;
+        padding: 1vw;
+    }
+
+    .planoNome, .planoPreco {
+        font-size: 8vw;
+    }
+
+    .mes {
+        font-size: 4vw;
+    }
+
+    .mesGrande {
+        font-size: 5vw;
+    }
+
+    .planoNomeGrande, .planoPrecoGrande {
+        font-size: 12vw;
+    }
+
+
+    /*Footer*/
+
+    #footer {
+        background-color: var(--preto-fundo);
+        height: fit-content;
+        padding: 5vw;
+    }
+
+    #listaFooter {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 2vw;
+        list-style: none;
+    }
+
+    #blocoMenuFooter {
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #tituloAcademiaFooterFlex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    hr {
+        width: 50%;
+    }
+
+    #textoCopyRight {
+        font-size: 3vw;
+    }
+}
