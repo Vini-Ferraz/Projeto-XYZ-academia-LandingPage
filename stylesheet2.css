@@ -4,13 +4,13 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
 
 :root {
-    --branco-fundo: #E1E1E1;
-    --vermelho-fundo: #FF0000;
+    --branco-fundo: #cccccc;
+    --vermelho-fundo: #ff2f2f;
     --preto-letra: #141414;
     --branco-sombra: #000000d7;
     --botao-cor-fundo: #C80808;
     --cor-lua: #000000;
-    --cor-sol: #e1e1e1;
+    --cor-sol: #cccccc;
 }
 
 * {
@@ -100,8 +100,8 @@
 /*Hero Row*/
 
 #heroRow {
-    padding-top: 15vh;
-    height: 100vh;
+    padding-top: 5vw;
+    height: fit-content;
     background-image: linear-gradient(90deg, #000000 30%, #00000000), url('https://cdn.pixabay.com/photo/2015/07/02/10/23/training-828741_1280.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -110,14 +110,14 @@
 #heroRowTexto {
     font-size: 3vw;
     font-weight: 400;
-    padding: 0 2vw;
+    padding: 2vw 2vw;
     text-align: justify;
     color: #FFFFFF;
 }
 
 #slogan {
     font-size: 6vw;
-    padding: 0 2vw;
+    padding: 2vw 2vw;
     line-height: 6vw;
     text-align: justify;
     color: #FFFFFF;
@@ -127,7 +127,7 @@
     border: none;
     width: 25vw;
     height: 5vw;
-    margin: 0 2vw;
+    margin: 2vw 2vw;
     background-color: var(--botao-cor-fundo);
     font-size: 3vw;
     font-weight: 700;
@@ -146,10 +146,10 @@
 
 #heroRowCaixa {
     display: flex;
+    padding: 2vw 0;
     flex-direction: column;
     align-items: start;
     justify-content: space-evenly;
-    height: 100vh;
     width: 60vw;
 }
 
@@ -366,7 +366,7 @@
     align-items: center;
     justify-content: space-around;
     height: 20vw;
-    padding: 2.5vw 0;
+    padding: 1vw 0;
 }
 
 hr {
@@ -579,7 +579,7 @@ hr {
         }
 
         .imagemAulas {
-            width: 100vw;
+            width: 100%;
             height: 50vw;
             display: block;
         }
